@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--WatchlistViewController-->
         <scene sceneID="hNz-n2-bh7">
@@ -21,7 +26,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uS-MK-77C">
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watchlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leG-Tu-MmI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watchlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leG-Tu-MmI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="JN2-43-ARk"/>
@@ -56,34 +61,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybz-xZ-0Fp">
-                                <rect key="frame" x="132" y="161" width="112.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 4 Movie/TV Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXd-s0-Ocf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="kRT-WX-kTL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybz-xZ-0Fp">
+                                <rect key="frame" x="131" y="179" width="113" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="od2-ce-cTe">
+                                <rect key="frame" x="145" y="217" width="84" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6y-S6-vZu">
-                                <rect key="frame" x="163.5" y="443" width="49" height="30"/>
+                                <rect key="frame" x="163" y="255" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitButton:" destination="M8y-Ng-bBe" eventType="touchUpInside" id="l6G-RE-CMS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="od2-ce-cTe">
-                                <rect key="frame" x="146" y="290" width="83.5" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oXd-s0-Ocf" firstAttribute="leading" secondItem="wvT-81-qJd" secondAttribute="leading" id="2zs-Uy-FRm"/>
                             <constraint firstItem="Ybz-xZ-0Fp" firstAttribute="centerX" secondItem="N9V-jE-alY" secondAttribute="centerX" id="3q9-YA-xCH"/>
-                            <constraint firstItem="s6y-S6-vZu" firstAttribute="top" secondItem="od2-ce-cTe" secondAttribute="bottom" constant="123" id="Dbh-4H-EdL"/>
-                            <constraint firstItem="Ybz-xZ-0Fp" firstAttribute="top" secondItem="N9V-jE-alY" secondAttribute="top" constant="141" id="KaM-H4-RIX"/>
+                            <constraint firstItem="s6y-S6-vZu" firstAttribute="top" secondItem="od2-ce-cTe" secondAttribute="bottom" constant="8" id="Dbh-4H-EdL"/>
+                            <constraint firstItem="Ybz-xZ-0Fp" firstAttribute="top" secondItem="N9V-jE-alY" secondAttribute="top" constant="159" id="KaM-H4-RIX"/>
                             <constraint firstItem="s6y-S6-vZu" firstAttribute="centerX" secondItem="N9V-jE-alY" secondAttribute="centerX" id="N15-cg-xgz"/>
+                            <constraint firstItem="oXd-s0-Ocf" firstAttribute="top" secondItem="wvT-81-qJd" secondAttribute="top" id="TJ1-34-rRO"/>
                             <constraint firstItem="od2-ce-cTe" firstAttribute="centerX" secondItem="N9V-jE-alY" secondAttribute="centerX" id="YEY-BP-HMC"/>
-                            <constraint firstItem="od2-ce-cTe" firstAttribute="top" secondItem="Ybz-xZ-0Fp" secondAttribute="bottom" constant="99" id="lOD-bU-o54"/>
+                            <constraint firstItem="od2-ce-cTe" firstAttribute="top" secondItem="Ybz-xZ-0Fp" secondAttribute="bottom" constant="8" id="lOD-bU-o54"/>
+                            <constraint firstItem="oXd-s0-Ocf" firstAttribute="centerX" secondItem="od2-ce-cTe" secondAttribute="centerX" id="zLw-lN-8H5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9V-jE-alY"/>
                     </view>
@@ -94,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Doy-Td-Wer" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791.20000000000005" y="-1.3493253373313345"/>
+            <point key="canvasLocation" x="-791.5" y="-1.5"/>
         </scene>
     </scenes>
 </document>

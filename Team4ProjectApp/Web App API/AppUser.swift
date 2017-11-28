@@ -53,7 +53,6 @@ final class AppUser {
         
     WebAppApi.getWatchlist() { (completionBlock) in
       watchlist = completionBlock
-      print(watchlist)
       watchlistReceieved = true
     }
 

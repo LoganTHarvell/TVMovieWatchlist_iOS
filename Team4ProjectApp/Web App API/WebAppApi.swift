@@ -52,8 +52,6 @@ final class WebAppApi {
         return
       }
       
-      print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
-
       var jsonObject: JSON?
 
       let decoder = JSONDecoder()
@@ -89,9 +87,6 @@ final class WebAppApi {
       guard error == nil else {
         return
       }
-      
-      print(String.init(data: data!, encoding: String.Encoding.utf8)! + "\n")
-
       
       var watchlist: [AppUser.Watchlist]?
       let decoder = JSONDecoder()

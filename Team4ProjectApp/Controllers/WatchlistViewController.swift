@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  WatchlistViewController.swift
 //  Team4ProjectApp
 //
 //  Created by Logan Harvell on 11/13/17.

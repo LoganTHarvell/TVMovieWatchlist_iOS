@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021D65831FC6502E0051EE88 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D65821FC6502E0051EE88 /* TabBar.swift */; };
 		021D65871FC653B80051EE88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D65861FC653B80051EE88 /* LoginViewController.swift */; };
 		021D66FD1FC68F6B0051EE88 /* WebAppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D66FC1FC68F6B0051EE88 /* WebAppApi.swift */; };
 		021D67001FCD42D70051EE88 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D66FF1FCD42D60051EE88 /* AppUser.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021D65821FC6502E0051EE88 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		021D65861FC653B80051EE88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		021D66FC1FC68F6B0051EE88 /* WebAppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppApi.swift; sourceTree = "<group>"; };
 		021D66FF1FCD42D60051EE88 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 		021D65841FC650470051EE88 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				021D65821FC6502E0051EE88 /* TabBar.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,7 +174,6 @@
 				022205B51FBA9EE4001C25EA /* WatchlistViewController.swift in Sources */,
 				021D67001FCD42D70051EE88 /* AppUser.swift in Sources */,
 				021D65871FC653B80051EE88 /* LoginViewController.swift in Sources */,
-				021D65831FC6502E0051EE88 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
