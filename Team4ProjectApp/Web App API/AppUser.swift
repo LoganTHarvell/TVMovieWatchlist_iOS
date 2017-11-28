@@ -10,7 +10,7 @@ import Foundation
 
 final class AppUser {
   
-  var id: String
+  var id: Int
   var email: String
   var password: String
   var auth_token: String
@@ -22,10 +22,10 @@ final class AppUser {
     let tv_id: Int?
     let title: String
     let releaseDate: String
-    let user_id: String?
+    let user_id: Int?
   }
   
-  required init(id: String, email: String, password: String,
+  required init(id: Int, email: String, password: String,
                 auth_token: String, watchlist: Watchlist) {
     self.id = id
     self.email = email
@@ -51,21 +51,21 @@ final class AppUser {
       RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
     } while !authenticated
         
-//    WebAppApi.getWatchlist() { (completionBlock) in
-//      watchlist = completionBlock
-//      watchlistReceieved = true
-//    }
-//
-//    repeat {
-//      RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
-//    } while !watchlistReceieved
-//
-//    WebAppApi.currentTask?.cancel()
-//
-    let user = AppUser.init(id: userJSON!.id, email: email, password: password,
+    WebAppApi.getWatchlist() { (completionBlock) in
+      watchlist = completionBlock
+      print(watchlist)
+      watchlistReceieved = true
+    }
+
+    repeat {
+      RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
+    } while !watchlistReceieved
+
+    WebAppApi.currentTask?.cancel()
+
+    let user = AppUser.init(id: Int(userJSON!.id)!, email: email, password: password,
                             auth_token: userJSON!.authentication_token,
-                            watchlist: Watchlist(id: 1, movie_id: 2, tv_id: nil,
-                                                 title: "somethin", releaseDate: "date", user_id: userJSON?.id))
+                            watchlist: watchlist![0])
     return user
   }
 }
