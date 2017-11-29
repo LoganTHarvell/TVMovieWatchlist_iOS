@@ -10,6 +10,8 @@ import UIKit
 
 class WatchlistViewController: UIViewController {
 
+  private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
   override func viewDidLoad() {
     super.viewDidLoad()
     

@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-  let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  private let appDelegate = UIApplication.shared.delegate as! AppDelegate
   
   override func viewDidLoad() {
     super.viewDidLoad()
