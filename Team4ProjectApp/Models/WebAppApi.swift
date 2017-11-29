@@ -28,7 +28,7 @@ final class WebAppApi {
   }
 
   internal static func login(email: String, password: String,
-                             completionBlock: @escaping (User) -> ()) {
+                             completionBlock: @escaping (User?) -> ()) {
     
     let json: [String: Any] = ["email": email, "password": password]
     let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -63,6 +63,7 @@ final class WebAppApi {
       } catch {
         print("error trying to convert JSON authentication\n")
         print(error)
+        completionBlock(nil)
         return
       }
   
@@ -73,7 +74,8 @@ final class WebAppApi {
   }
   
   
-  internal static func getWatchlist(user: User, completionBlock: @escaping ([AppUser.Watchlist]) -> ()) {
+  internal static func getWatchlist(user: User,
+                                    completionBlock: @escaping ([AppUser.movieTVEntry]) -> ()) {
     
     let session = URLSession(configuration: self.config)
     
@@ -98,10 +100,10 @@ final class WebAppApi {
         return
       }
             
-      var watchlist: [AppUser.Watchlist]?
+      var watchlist: [AppUser.movieTVEntry]?
       let decoder = JSONDecoder()
       do {
-        watchlist = try decoder.decode([AppUser.Watchlist].self, from: data!)
+        watchlist = try decoder.decode([AppUser.movieTVEntry].self, from: data!)
       } catch {
         print("error trying to convert data to JSON")
         print(error)

@@ -43,9 +43,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020E6D7F1FCE89F200A38094 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				021D66FC1FC68F6B0051EE88 /* WebAppApi.swift */,
+				021D66FF1FCD42D60051EE88 /* AppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		021D65841FC650470051EE88 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				022205BD1FBA9EE4001C25EA /* LaunchScreen.storyboard */,
+				022205B81FBA9EE4001C25EA /* Main.storyboard */,
 				020E6D7B1FCE5DB200A38094 /* MovieTVEntryView.swift */,
 			);
 			path = UI;
@@ -58,15 +69,6 @@
 				022205B41FBA9EE4001C25EA /* WatchlistViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		021D66FE1FC68F700051EE88 /* Web App API */ = {
-			isa = PBXGroup;
-			children = (
-				021D66FC1FC68F6B0051EE88 /* WebAppApi.swift */,
-				021D66FF1FCD42D60051EE88 /* AppUser.swift */,
-			);
-			path = "Web App API";
 			sourceTree = "<group>";
 		};
 		022205A61FBA9EE4001C25EA = {
@@ -88,14 +90,12 @@
 		022205B11FBA9EE4001C25EA /* Team4ProjectApp */ = {
 			isa = PBXGroup;
 			children = (
-				022205B21FBA9EE4001C25EA /* AppDelegate.swift */,
-				022205B81FBA9EE4001C25EA /* Main.storyboard */,
-				022205BB1FBA9EE4001C25EA /* Assets.xcassets */,
-				022205BD1FBA9EE4001C25EA /* LaunchScreen.storyboard */,
 				022205C01FBA9EE4001C25EA /* Info.plist */,
+				022205BB1FBA9EE4001C25EA /* Assets.xcassets */,
+				022205B21FBA9EE4001C25EA /* AppDelegate.swift */,
 				021D65851FC6507A0051EE88 /* Controllers */,
 				021D65841FC650470051EE88 /* UI */,
-				021D66FE1FC68F700051EE88 /* Web App API */,
+				020E6D7F1FCE89F200A38094 /* Models */,
 			);
 			path = Team4ProjectApp;
 			sourceTree = "<group>";
