@@ -11,7 +11,7 @@ import Foundation
 final class WebAppApi {
   
   static let config = URLSessionConfiguration.default
-  static let hostURL = String("http://localhost:5000")
+  static let hostURL = String("http://127.0.0.1:5000")
   static var currentTask: URLSessionTask?
   
   struct JSON: Codable {
