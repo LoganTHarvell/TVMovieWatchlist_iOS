@@ -51,7 +51,7 @@ final class AppUser {
       RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
     } while !authenticated
         
-    WebAppApi.getWatchlist() { (completionBlock) in
+    WebAppApi.getWatchlist(user: userJSON!) { (completionBlock) in
       watchlist = completionBlock
       watchlistReceieved = true
     }

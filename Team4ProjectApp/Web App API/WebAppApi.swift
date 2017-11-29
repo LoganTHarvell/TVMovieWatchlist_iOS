@@ -33,7 +33,10 @@ final class WebAppApi {
     let json: [String: Any] = ["email": email, "password": password]
     let jsonData = try? JSONSerialization.data(withJSONObject: json)
     
-    let url = URL(string: hostURL + "/login")!
+    guard let url = URL(string: hostURL + "/login") else {
+      print("Error initializing URL for login.")
+      return
+    }
     
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
@@ -60,6 +63,7 @@ final class WebAppApi {
       } catch {
         print("error trying to convert JSON authentication\n")
         print(error)
+        return
       }
   
       completionBlock(jsonObject!.response.user)
@@ -69,13 +73,19 @@ final class WebAppApi {
   }
   
   
-  internal static func getWatchlist(completionBlock: @escaping ([AppUser.Watchlist]) -> ()) {
+  internal static func getWatchlist(user: User, completionBlock: @escaping ([AppUser.Watchlist]) -> ()) {
     
     let session = URLSession(configuration: self.config)
     
-    let url = URL(string: hostURL + "/getAppWatchlist")!
+    guard let url = URL(string:hostURL + "/getAppWatchlist/\(user.id)") else {
+      print("URL could not be initialized.")
+      return
+    }
+    
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
+    request.addValue(user.authentication_token,
+                     forHTTPHeaderField: "Authentication-Token")
     
     currentTask = session.dataTask(with: request) {
       (data, response, error) in
@@ -87,7 +97,7 @@ final class WebAppApi {
       guard error == nil else {
         return
       }
-      
+            
       var watchlist: [AppUser.Watchlist]?
       let decoder = JSONDecoder()
       do {
@@ -95,6 +105,7 @@ final class WebAppApi {
       } catch {
         print("error trying to convert data to JSON")
         print(error)
+        return
       }
     
       completionBlock(watchlist!)
